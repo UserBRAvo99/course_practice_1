@@ -1,0 +1,92 @@
+/* Прописуємо стандартну команду box-sizing: border-box; - це означає що  властивості width і height задають фінальний розмір елемента і включають значення полів (padding) і меж (border),
+але не відступів (Margin) */
+html {
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.btn-bloc {
+    display: flex;
+    padding-top: 50px;
+}
+.btn {
+position: relative;
+
+    display: inline-flex;
+
+    min-width: 80px;
+    min-height: 70px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    border: transparent;
+    border-radius: 10px;
+    background-color: darksalmon;
+    color: blueviolet;
+
+    align-items: center;
+
+    text-transform: uppercase;
+    font-weight: bold;
+
+    cursor: pointer;
+/* Перехід */
+/* що ми змінюємо(за замовчуванням all) */
+    /* transition-property: background-color; */
+    /* час за який перехід дійде з точки А-В, та з В-А , рекомендовано писати в мілісекундах*/
+    /* transition-duration: 250ms; */
+/* cubic-bezier - функція яка визначає криву переходу, має багато варіантів */
+    /* transition-timing-function: cubic-bezier(0.4, 0, 0.2. 1); */
+/* час, після якого почнеться перехід(рекомендовано також ставити мілісекунди) */
+    /* transition-delay: 10ms; */
+/* Всі чотири функції можна записати в одну, послідовно */
+transition: background-color 250ms cubic-bezier(.22, .71, .73, 0),
+color 250ms cubic-bezier(.22, .71, .73, 0);
+
+overflow: hidden;
+}
+.btn::before {
+    content: " ";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/icons8-potter-face-30.png);
+    margin-right: 10px;
+
+    transition: transform 400ms cubic-bezier(.22, .71, .73, 0);
+}
+.btn:hover::before,
+.btn:focus::before {
+    transform: translateY(-55px);
+}
+
+.btn::after {
+    position: absolute;
+top: 50%;
+left: 6px;
+
+    content: " ";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/icons8-potter-logo-30.png);
+
+    transform: translateY(calc(-50% + 55px));
+
+    transition: transform 400ms cubic-bezier(.22, .71, .73, 0);
+}
+
+.btn:hover::after,
+.btn:focus::after {
+    transform: translateY(calc(-50%));
+}
+
+.btn:hover, .btn:focus {
+    background-color: darkgray;
+    color: red;
+}
