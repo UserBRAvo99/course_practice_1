@@ -30,5 +30,13 @@
     </main>
     <!-- footer - підвал сторінки(сайту), може повторювати навігацію шапки, також може мати лого. Та зазвичай має більше контактної інформації, адресу, форму для заповнення, посилання на соц мережі компанії. -->
     <footer></footer>
+    <!-- скріпт - який динамічно змінює висоту падінгу для боді, відносно поточної висоти хедера. Скріпт ставиться в кінці боді -->
+    <script>
+      const { height: pageHeaderHeight } = document
+        .querySelector('.page-header')
+        .getBoundingClientRect();
+
+      document.body.style.paddingTop = '${pageHeaderHeight}px';
+    </script>
   </body>
 </html>
