@@ -10,7 +10,7 @@ html {
 }
 
 .btn-bloc {
-    display: flex;
+    display: block;
     padding-top: 50px;
 }
 .btn {

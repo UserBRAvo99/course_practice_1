@@ -1,0 +1,141 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+.link {
+    text-decoration: none;
+}
+
+.list {
+    list-style-type: none;
+}
+body {
+    padding-top: 50px;
+}
+.bloc {
+    display: block;
+    position: relative;
+    width: 270px;
+    height: 104px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: black;
+    border-radius: 8px;
+}
+.bloc_list {
+    display: flex;
+    padding: 0;
+}
+.bloc_link {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    fill: white;
+}
+.one, .two, .three, .four {
+    position: absolute;
+    top: 30px;
+    width: 44px;
+    height: 44px;
+    background-color: gray;
+    border-radius: 50%;
+
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 2000ms;
+    animation-fill-mode: forwards;
+}
+.one {
+    left: -100px;
+    animation-name: one;
+}
+.two {
+    left: 86px;
+    top: -100px;
+    animation-name: two;
+}
+.three {
+    left: 140px;
+    top: 150px;
+    animation-name: three;
+}
+.four {
+    left: 300px;
+    animation-name: four;
+}
+@keyframes one {
+    0% {
+        left: -100px;
+    }
+    50%{
+        top: 60px;
+    }
+    75% {
+        top: 10px;
+    }
+    100% {
+        left: 32px;
+        border-radius: 25%;
+    }
+}
+@keyframes two {
+    0% {
+        top: -100px;
+        left: 86px;
+    }
+    50% {
+        top: 60px;
+    }
+    70% {
+        top: 5px;
+    }
+    100% {
+        left: 86px;
+        top: 30px;
+        border-radius: 25%;
+    }
+}
+@keyframes three {
+    0% {
+        top: 150px;
+        left: 140px;
+        }    
+    50% {
+        top: 0px;
+        }
+    70% {
+        top: 60px;
+        }   
+    100% {
+        top: 30px;
+        left: 140px;
+        border-radius: 25%;
+        }
+}
+@keyframes four {
+    0% {
+        left: 300px;
+    }
+    50% {
+        top: 60px;
+    }
+    75% {
+        top: 10px;
+    }
+    100% {
+        left: 194px;
+        border-radius: 25%;
+    }
+}
+.linc_icon {
+    display: block;
+}

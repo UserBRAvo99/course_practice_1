@@ -18,6 +18,8 @@
     />
     <!-- Підключаєм стилі CSS для стилізації та оформлення HTML сторінки -->
     <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/anim-styles-circle.css" />
+    <link rel="stylesheet" href="./styles/soc_link_anima.css" />
   </head>
   <body>
     <!-- header - шапка сторінки, зазвичай в ній міститься лого сторінки, меню навігації, контакти та пошук по сторінці(сайту) -->
@@ -32,11 +34,50 @@
     <footer></footer>
     <!-- скріпт - який динамічно змінює висоту падінгу для боді, відносно поточної висоти хедера. Скріпт ставиться в кінці боді -->
     <script>
-      const { height: pageHeaderHeight } = document
-        .querySelector('.page-header')
-        .getBoundingClientRect();
+      // const { height: pageHeaderHeight } = document
+      //   .querySelector('.page-header')
+      //   .getBoundingClientRect();
 
-      document.body.style.paddingTop = '${pageHeaderHeight}px';
+      // document.body.style.paddingTop = '${pageHeaderHeight}px';
     </script>
+    <div class="container">
+      <div class="block-for-circle">
+        <div>
+          <a href="#" class="circle"></a>
+        </div>
+      </div>
+      <div class="bloc_soc">
+        <ul class="soc_icone_list list">
+          <li class="soc_icone_item">
+            <a href="#" class="soc_icone_link link">
+              <svg class="soc_icone_anim">
+                <use href=""></use>
+              </svg>
+            </a>
+          </li>
+          <li class="soc_icone_item">
+            <a href="#" class="soc_icone_link link">
+              <svg class="soc_icone_anim">
+                <use href=""></use>
+              </svg>
+            </a>
+          </li>
+          <li class="soc_icone_item">
+            <a href="#" class="soc_icone_link link">
+              <svg class="soc_icone_anim">
+                <use href=""></use>
+              </svg>
+            </a>
+          </li>
+          <li class="soc_icone_item">
+            <a href="#" class="soc_icone_link link">
+              <svg class="soc_icone_anim">
+                <use href=""></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
