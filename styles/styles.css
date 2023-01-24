@@ -11,7 +11,8 @@ html {
 
 .btn-bloc {
     display: block;
-    padding-top: 50px;
+    padding-top: 50px; 
+    margin: auto;
 }
 .btn {
 position: relative;
